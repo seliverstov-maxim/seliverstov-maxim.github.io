@@ -10,6 +10,6 @@
     <div class="bg-stuff"></div>
     <div class="bg-color2"></div>
     <div id="app"></div>
-    <script src="bundle-3c22d6e67a66945e8f15.js"></script>
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}<script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>{% } %}
   </body>
 </html>
