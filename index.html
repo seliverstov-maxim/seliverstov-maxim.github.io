@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Адаптивное меню</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.min.css" />
+
+    <style>
+      .space {
+        margin-bottom: 50px;
+      }
+
+      .big-space {
+        margin-bottom: 100px;
+      }
+
+      .section {
+        background-size: cover;
+      }
+
+      #section1 {
+        background-image: url('img/bg1.jpg');
+        color: white;
+      }
+
+      #section1 .container {
+        position: relative;
+        z-index: 2
+      }
+
+      #section1 .title {
+        text-align: center;
+      }
+
+      #section2 {
+        background-image: url('img/bg2.jpg');
+      }
+
+      #section3 {
+        background-image: url('img/bg3.jpg');
+      }
+
+      #section4 {
+        background-image: url('img/bg4.jpg');
+      }
+
+      #section5 {
+        background-image: url('img/bg5.jpg');
+      }
+
+      #video-background {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+      }
+      .collapse.in {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li data-menuanchor="home"><a href="#home">home</a></li>
+            <li data-menuanchor="page"><a href="#page">page</a></li>
+            <li data-menuanchor="gallery"><a href="#gallery">gallery</a></li>
+            <li data-menuanchor="about"><a href="#about">about</a></li>
+            <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="full-page">
+      <div class="section" id="section1">
+
+        <div class="container">
+          <div class="row">
+            <row>
+              <div class="col-md-6 col-sm-12 title">
+                <div class="big-space"></div>
+                <h1>Лендинг пейдж от 5000р.</h1>
+                <h2>с конверсией от 20%</h2>
+                <div class="space"></div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="space"></div>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <div class="big-space"></div>
+              </div>
+            </row>
+          </div>
+        </div>
+
+        <video autoplay loop class="fillWidth fadeIn wow collapse in" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+          <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="section" id="section2">
+        <div class="container">
+          <div class="row">
+            <h1>page</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section3">
+        <div class="container">
+          <div class="row">
+            <h1>gallery</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section4">
+        <div class="container">
+          <div class="row">
+            <h1>about</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section5">
+        <div class="container">
+          <div class="row">
+            <h1>contact</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/vendors/scrolloverflow.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $('#full-page').fullpage({
+          menu: '#menu',
+          anchors: ['home', 'page', 'gallery', 'about', 'contact'],
+          scrollOverflow: true,
+          touchSensitivity: 50,
+          onLeave: function(){
+            $('video').get(0).play();
+          },
+          afterRender: function(){
+            $('video').get(0).play();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
