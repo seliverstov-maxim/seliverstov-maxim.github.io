@@ -62,9 +62,7 @@
         width: auto;
         height: auto;
         z-index: 1;
-      }
-      .collapse.in {
-        display: block;
+        display: none;
       }
     </style>
   </head>
@@ -129,6 +127,8 @@
           window.onload = function() {
             if ($.browser.mobile == true) {
               $('video').remove();
+            } else {
+              $('video').css('display', 'block')
             }
           }
         </script>
