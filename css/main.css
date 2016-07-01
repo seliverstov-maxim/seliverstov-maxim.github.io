@@ -1,0 +1,73 @@
+body { font-family: 'Old Standard TT', serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
+
+.space {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 40px
+}
+
+.big-space {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 80px
+}
+
+#home {
+  background: url('../img/bg-top.jpg') center top no-repeat;;
+  height: 1000px;
+  background-size: contain;
+  padding: 80px 0;
+}
+
+.main-title-content {
+  background-color: #F3AD1D;
+  color: #000;
+  font-weight: bolder;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.main-title2 {
+  padding-top: 1px;
+}
+
+.main-title2-content {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 22px;
+  margin-top: 19px;
+}
+
+.wrap-headers {
+  margin-bottom: 140px;
+}
+
+.form1 {
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.form1-header {
+  color: #ffde00;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form1 .form-control {
+  background-color: #444;
+  border: 1px solid #333;
+}
+
+.form1 .btn-default {
+  background-color: #F3AD1D;
+  border: 1px solid #333;
+  color: #000;
+  font-weight: bolder;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}

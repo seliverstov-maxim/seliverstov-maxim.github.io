@@ -7,64 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />
-
-    <style>
-      .space {
-        margin-bottom: 50px;
-      }
-
-      .big-space {
-        margin-bottom: 100px;
-      }
-
-      .section {
-        background-size: cover;
-      }
-
-      #section1 {
-        background-image: url('img/bg1.jpg');
-        color: white;
-      }
-
-      #section1 .container {
-        position: relative;
-        z-index: 2
-      }
-
-      #section1 .title {
-        text-align: center;
-      }
-
-      #section2 {
-        background-image: url('img/bg2.jpg');
-      }
-
-      #section3 {
-        background-image: url('img/bg3.jpg');
-      }
-
-      #section4 {
-        background-image: url('img/bg4.jpg');
-      }
-
-      #section5 {
-        background-image: url('img/bg5.jpg');
-      }
-
-      #video-background {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 1;
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" id="menu">
@@ -80,129 +26,65 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li data-menuanchor="home"><a href="#home">home</a></li>
-            <li data-menuanchor="page"><a href="#page">page</a></li>
-            <li data-menuanchor="gallery"><a href="#gallery">gallery</a></li>
-            <li data-menuanchor="about"><a href="#about">about</a></li>
-            <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+            <li data-menuanchor="home"><a href="#home">Главная</a></li>
+            <li data-menuanchor="guarantee"><a href="#page">Гарантия</a></li>
+            <li data-menuanchor="examples"><a href="#gallery">Примеры</a></li>
+            <li data-menuanchor="portfolio"><a href="#about">Портфолио</a></li>
+            <li data-menuanchor="contacts"><a href="#contact">Контакты</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id="full-page">
-      <div class="section" id="section1">
-
+    <div class="main-wrapper">
+      <div id="home" class="text-center">
         <div class="container">
-          <div class="row">
-            <row>
-              <div class="col-md-6 col-sm-12 title">
-                <div class="big-space"></div>
-                <h1>Лендинг пейдж от 5000р.</h1>
-                <h2>с конверсией от 20%</h2>
-                <div class="space"></div>
+          <div class="wrap-headers">
+            <div class="big-space"></div>
+            <h1 class="main-title">
+              <span class="main-title-content">Разработка сайтов которые зарабатывают.</span>
+            </h1>
+            <h2 class="main-title2">
+              <span class="main-title2-content">13 452 000 р. заработано клиентами</span>
+            </h2>
+          </div>
+          <div class="form1">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h3 class="form1-header">Закажи разработку сайта у профессионалов</h3>
+                <p class="form1-description">Мы не большая, но профессиональная команда маркетологов, дизайнеров и разработчиков. Мы отличиаемся от других компелксным подходом. Ляля тополя</p>
               </div>
               <div class="col-md-6 col-sm-12">
-                <div class="space"></div>
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <input type="contact" class="form-control" id="user_contact" placeholder="Телефон или Email">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <textarea class="form-control" placeholder="Как вас зовут? Может по чашечке кофе? Шутка! Оставьте коментарий о себе и проекте, или ни чего не пишите, мы телепаты, сами догадаемся."></textarea>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-default">Свяжитесь со мной, мне нужен сайт</button>
                 </form>
-                <div class="big-space"></div>
+
               </div>
-            </row>
-          </div>
-        </div>
-
-        <video autoplay loop class="fillWidth fadeIn wow collapse in" id="video-background">
-          <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">
-        </video>
-        <script type="text/javascript">
-          window.onload = function() {
-            if ($.browser.mobile == true) {
-              $('video').remove();
-            } else {
-              $('video').css('display', 'block')
-            }
-          }
-        </script>
-      </div>
-
-      <div class="section" id="section2">
-        <div class="container">
-          <div class="row">
-            <h1>page</h1>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="section" id="section3">
-        <div class="container">
-          <div class="row">
-            <h1>gallery</h1>
-          </div>
-        </div>
+      <div id="guarantee" class="container">
+        <div class="row"></div>
       </div>
-
-      <div class="section" id="section4">
-        <div class="container">
-          <div class="row">
-            <h1>about</h1>
-          </div>
-        </div>
+      <div id="examples" class="container">
+        <div class="row"></div>
       </div>
-
-      <div class="section" id="section5">
-        <div class="container">
-          <div class="row">
-            <h1>contact</h1>
-          </div>
-        </div>
+      <div id="portfolio" class="container">
+        <div class="row"></div>
+      </div>
+      <div id="contacts" class="container">
+        <div class="row"></div>
       </div>
     </div>
 
-
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="js/scrolloverflow.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="js/jquery.detect.mobilebrowser.js"></script>
-
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        $('#full-page').fullpage({
-          menu: '#menu',
-          anchors: ['home', 'page', 'gallery', 'about', 'contact'],
-          scrollOverflow: true,
-          onLeave: function(){
-            var vid = $('video');
-            if (vid.length != 0) {
-              vid.get(0).play();
-            }
-          },
-          afterRender: function(){
-            var vid = $('video');
-            if (vid.length != 0) {
-              vid.get(0).play();
-            }
-          }
-        });
-      });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
-
-<!--
-  нужно прикручивать оптимизированные картинки под размеры экрана чтобы сайт грузился быстрее
-  не нужно добавлять видео если с телефона
--->
