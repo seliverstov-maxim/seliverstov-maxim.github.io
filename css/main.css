@@ -15,8 +15,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
 
 #home {
   background: url('../img/bg-top.jpg') center top no-repeat;;
-  height: 1000px;
-  background-size: contain;
+  height: 780px;
+  background-size: auto 100%;
   padding: 80px 0;
 }
 
