@@ -104,6 +104,42 @@ ul.example-content {
   font-weight: bold;
 }
 
+.tariffs {
+  background-color: #E68718;
+}
+
+.tariffs .first-tariff {
+  background-color: #FBC54F;
+}
+
+.tariffs .second-tariff {
+  background-color: #FDE2A6;
+}
+
+.tariffs .third-tariff {
+  background-color: #FBC54F;
+}
+
+ul.list-tarrif-options {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-tarrif-options li {
+  padding: 0.5em 30px;
+  margin: 0 -15px;
+}
+
+.list-tarrif-options li:nth-child(2n+1) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tariff-aciton {
+  width: 100%;
+  margin: 1em 0;
+}
+
 .yellow-bg {
   background-color: #F3AD1D;
   color: #000;
