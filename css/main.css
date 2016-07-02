@@ -30,7 +30,9 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   font-weight: bolder;
   font-size: 40px;
   padding: 10px;
-  line-height: 75px;
+  line-height: 55px;
+  display: block;
+  overflow: auto;
 }
 
 .main-title2 {
@@ -44,7 +46,9 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   padding: 10px;
   font-size: 22px;
   margin-top: 19px;
-  line-height: 50px;
+  line-height: 37px;
+  display: block;
+  overflow: auto;
 }
 
 .wrap-headers {
@@ -55,6 +59,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   padding: 20px;
   background-color: rgba(0,0,0,0.5);
   color: #fff;
+  overflow: auto;
 }
 
 .form1-header {
@@ -77,4 +82,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   font-weight: bolder;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
+  white-space: normal;
+  max-width: 100%
 }
