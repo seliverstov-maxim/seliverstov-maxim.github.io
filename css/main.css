@@ -156,6 +156,15 @@ ul.list-tarrif-options {
   margin: 1em 0;
 }
 
+.contact-wrapper {
+  padding: 1em;
+}
+
+.contact-list {
+  margin-top: 2em;
+  list-style-type: none;
+}
+
 .yellow-bg {
   background-color: #F3AD1D;
   color: #000;
