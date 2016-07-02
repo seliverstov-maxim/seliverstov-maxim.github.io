@@ -1,5 +1,8 @@
 .header {
   background: url('../img/head-bg.jpg');
+}
+
+.section {
   padding: 2em 0;
 }
 
@@ -56,6 +59,14 @@
   background-color: #F3AD1D;
   border: 1px solid #333;
   color: #000;
+}
+
+.examples {
+  background: url('../img/examples-bg.png');
+}
+
+.examples h1 {
+  color: #fff;
 }
 
 .yellow-bg {
