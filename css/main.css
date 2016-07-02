@@ -3,6 +3,10 @@
   padding: 2em 0;
 }
 
+.headers-wrapper {
+  margin: 5em 0;
+}
+
 .main-header {
   margin-bottom: 0;
 }
@@ -38,9 +42,11 @@
 .form1 .form-control {
   background-color: #444;
   border: 1px solid #F3AD1D;
+  border-radius: 0px;
 }
 
 .form1 .btn-default {
+  border-radius: 0px;
   background-color: #F3AD1D;
   border: 1px solid #333;
   color: #000;
