@@ -1,3 +1,9 @@
+hr {
+  width: 200px;
+  border-top: 2px solid #aaa;
+  margin-bottom: 3em;
+}
+
 .header {
   background: url('../img/head-bg.jpg');
 }
