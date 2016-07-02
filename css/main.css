@@ -8,15 +8,15 @@
 }
 
 .main-header .content {
-  box-shadow: 0.5em 0 0 5px rgb(243,173,29), -0.5em 0 0px 5px rgb(243,173,29);
+  box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29);
 }
 
 .second-header .content {
-  box-shadow: 0.5em 0 0 5px #000, -0.5em 0 0px 5px #000;
+  box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000;
 }
 
 .second-header {
-  margin-top: 0.4em;
+  margin-top: 3px;
 }
 
 .form-section-wrapper {
