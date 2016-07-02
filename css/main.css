@@ -1,3 +1,20 @@
+.header {
+  background: url('../img/head-bg.jpg');
+  padding: 2em 0;
+}
+
+.form-section-wrapper {
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.form-description-wrapper, .form-wrapper {
+  padding: 1em;
+}
+
+.form-description-wrapper {
+  color: #fff;
+}
+
 .yellow-bg {
   background-color: #F3AD1D;
   color: #000;
