@@ -1,63 +1,29 @@
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url(glyphicons-halflings-regular.woff) format('woff');
-}
+@font-face { font-family: "Glyphicons Halflings"; src: url(glyphicons-halflings-regular.woff) format('woff'); }
 
-hr {
-  width: 200px;
-  border-top: 2px solid #aaa;
-  margin-bottom: 3em;
-}
+hr { width: 200px; border-top: 2px solid #aaa; margin-bottom: 3em; }
 
-.header {
-  background: url('../img/head-bg.jpg');
-}
-
+.header { background: url('../img/head-bg.jpg'); }
 @media (max-width: 768px) {
-  .header {
-    background: url('../img/head-bg-770.jpg');
-  }
+  .header { background: url('../img/head-bg-770.jpg'); }
 }
 
-.section {
-  padding: 2em 0;
-}
+.section { padding: 2em 0; }
 
-.headers-wrapper {
-  margin: 5em 0;
-}
+.headers-wrapper { margin: 5em 0; }
 
-.main-header {
-  margin-bottom: 0;
-}
+.main-header { margin-bottom: 0; }
+.main-header .content { box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29); }
 
-.main-header .content {
-  box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29);
-}
+.second-header { margin-top: 3px; }
+.second-header .content { box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000; }
 
-.second-header .content {
-  box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000;
-}
+.yellow-bg { background-color: #F3AD1D; color: #000; }
+.black-bg { background-color: #000; color: #fff; }
 
-.second-header {
-  margin-top: 3px;
-}
-
-.form-section-wrapper {
-  background-color: rgba(0, 0, 0, 0.5)
-}
-
-.form-description-wrapper, .form-wrapper {
-  padding: 1em;
-}
-
-.form-description-wrapper {
-  color: #fff;
-}
-
-.form1 {
-  margin-top: 2em;
-}
+.form-section-wrapper { background-color: rgba(0, 0, 0, 0.5); }
+.form-description-wrapper, .form-wrapper { padding: 1em; }
+.form-description-wrapper { color: #fff; }
+.form1 { margin-top: 2em; }
 
 .form1 .form-control {
   background-color: #444;
@@ -78,99 +44,30 @@ hr {
   color: #000;
 }
 
-.examples {
-  background: url('../img/examples-bg.png');
-}
-
+.examples { background: url('../img/examples-bg.png'); }
 @media (max-width: 768px) {
-  .examples {
-    background: url('../img/examples-bg-770.png');
-  }
+  .examples { background: url('../img/examples-bg-770.png'); }
 }
 
-.examples h1 {
-  color: #fff;
-}
+.examples h1 { color: #fff; }
+.how-it-works .content { padding-top: 2em; }
+.company-name { color: #fbc100; }
+ul.example-content { color: #fff; font-size: x-large; list-style-type: none; }
 
-.how-it-works .content {
-  padding-top: 2em;
-}
+.example-content-total { margin-top: 0; color: #fff; }
+.example-content-total .income { color: #f00; font-weight: bold; }
 
-.company-name {
-  color: #fbc100;
-}
+.tariffs { background-color: #E68718; }
+.tariffs hr { border-top: 2px solid #333; }
+.tariffs .first-tariff { background-color: #FBC54F; }
+.tariffs .second-tariff { background-color: #FDE2A6; }
+.tariffs .third-tariff { background-color: #FBC54F; }
+.tariff-wrapper { overflow: auto; }
 
-ul.example-content {
-  color: #fff;
-  font-size: x-large;
-  list-style-type: none;
-}
+ul.list-tarrif-options { margin: 0; padding: 0; list-style-type: none; }
+.list-tarrif-options li { padding: 0.5em 30px; margin: 0 -15px; }
+.list-tarrif-options li:nth-child(2n+1) { background-color: rgba(255, 255, 255, 0.2); }
+.tariff-aciton { width: 100%; margin: 1em 0; }
 
-.example-content-total {
-  margin-top: 0;
-  color: #fff;
-}
-
-.example-content-total .income {
-  color: #f00;
-  font-weight: bold;
-}
-
-.tariffs {
-  background-color: #E68718;
-}
-
-.tariffs .first-tariff {
-  background-color: #FBC54F;
-}
-
-.tariffs .second-tariff {
-  background-color: #FDE2A6;
-}
-
-.tariffs .third-tariff {
-  background-color: #FBC54F;
-}
-
-.tariff-wrapper {
-  overflow: auto;
-}
-
-ul.list-tarrif-options {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.list-tarrif-options li {
-  padding: 0.5em 30px;
-  margin: 0 -15px;
-}
-
-.list-tarrif-options li:nth-child(2n+1) {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.tariff-aciton {
-  width: 100%;
-  margin: 1em 0;
-}
-
-.contact-wrapper {
-  padding: 1em;
-}
-
-.contact-list {
-  margin-top: 2em;
-  list-style-type: none;
-}
-
-.yellow-bg {
-  background-color: #F3AD1D;
-  color: #000;
-}
-
-.black-bg {
-  background-color: #000;
-  color: #fff;
-}
+.contact-wrapper { padding: 1em; }
+.contact-list { list-style-type: none; }
