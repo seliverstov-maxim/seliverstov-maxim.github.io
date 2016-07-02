@@ -20,16 +20,22 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   padding: 80px 0;
 }
 
+.main-title {
+  margin-bottom: 0px;
+}
+
 .main-title-content {
   background-color: #F3AD1D;
   color: #000;
   font-weight: bolder;
   font-size: 40px;
   padding: 10px;
+  line-height: 75px;
 }
 
 .main-title2 {
   padding-top: 1px;
+  margin-top: 0px
 }
 
 .main-title2-content {
@@ -38,6 +44,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
   padding: 10px;
   font-size: 22px;
   margin-top: 19px;
+  line-height: 50px;
 }
 
 .wrap-headers {
