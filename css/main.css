@@ -3,6 +3,18 @@
   padding: 2em 0;
 }
 
+.main-header {
+  margin-bottom: 0;
+}
+
+.main-header .content, .second-header .content {
+  padding: 0 0.5em;
+}
+
+.second-header {
+  margin-top: 1px;
+}
+
 .form-section-wrapper {
   background-color: rgba(0, 0, 0, 0.5)
 }
