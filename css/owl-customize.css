@@ -1,0 +1,4 @@
+.owl-carousel { position: relative; }
+.owl-prev, .owl-next { position: absolute; top: 50%; margin-top: -10px; }
+.owl-prev { left: 0; }
+.owl-next { right: 0; }
