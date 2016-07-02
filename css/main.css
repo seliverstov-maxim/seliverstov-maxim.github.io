@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url(glyphicons-halflings-regular.woff) format('woff');
+}
+
 hr {
   width: 200px;
   border-top: 2px solid #aaa;
@@ -77,6 +82,26 @@ hr {
 
 .how-it-works .content {
   padding-top: 2em;
+}
+
+.company-name {
+  color: #fbc100;
+}
+
+ul.example-content {
+  color: #fff;
+  font-size: x-large;
+  list-style-type: none;
+}
+
+.example-content-total {
+  margin-top: 0;
+  color: #fff;
+}
+
+.example-content-total .income {
+  color: #f00;
+  font-weight: bold;
 }
 
 .yellow-bg {
