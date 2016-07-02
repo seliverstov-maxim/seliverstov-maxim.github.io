@@ -120,6 +120,10 @@ ul.example-content {
   background-color: #FBC54F;
 }
 
+.tariff-wrapper {
+  overflow: auto;
+}
+
 ul.list-tarrif-options {
   margin: 0;
   padding: 0;
