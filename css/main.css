@@ -11,11 +11,11 @@ hr { width: 200px; border-top: 2px solid #aaa; margin-bottom: 3em; }
 
 .headers-wrapper { margin: 5em 0; }
 
-.main-header { margin-bottom: 0; line-height: 43px; }
-.main-header .content { box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29); }
+.main-header { margin-bottom: 0; line-height: 1.6em; }
+.main-header .content { box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29); padding: 0.2em; }
 
-.second-header { margin-top: 3px; line-height: 35px; }
-.second-header .content { box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000; }
+.second-header { margin-top: 0.2em; line-height: 1.3em; }
+.second-header .content { box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000; padding: 0.2em; }
 
 .yellow-bg { background-color: #F3AD1D; color: #000; }
 .black-bg { background-color: #000; color: #fff; }
