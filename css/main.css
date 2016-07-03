@@ -11,10 +11,10 @@ hr { width: 200px; border-top: 2px solid #aaa; margin-bottom: 3em; }
 
 .headers-wrapper { margin: 5em 0; }
 
-.main-header { margin-bottom: 0; }
+.main-header { margin-bottom: 0; line-height: 43px; }
 .main-header .content { box-shadow: 0.5em 0 0 1px rgb(243,173,29), -0.5em 0 0px 1px rgb(243,173,29); }
 
-.second-header { margin-top: 3px; }
+.second-header { margin-top: 3px; line-height: 35px; }
 .second-header .content { box-shadow: 0.5em 0 0 1px #000, -0.5em 0 0px 1px #000; }
 
 .yellow-bg { background-color: #F3AD1D; color: #000; }
