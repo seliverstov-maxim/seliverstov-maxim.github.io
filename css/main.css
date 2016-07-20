@@ -9,6 +9,7 @@ body {
   color: #5B5B5B;
   font-family: 'Roboto','Open Sans', sans-serif;
   min-width: 500px;
+  overflow: auto;
 }
 
 hr { width: 200px; border-top: 2px solid #aaa; }
@@ -65,6 +66,7 @@ hr { width: 200px; border-top: 2px solid #aaa; }
   font-weight: 300;
   color: #fff;
   text-align: center;
+  min-width: 438px;
 }
 
 .item-parameter li {
