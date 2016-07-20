@@ -74,10 +74,15 @@ hr { width: 200px; border-top: 2px solid #aaa; }
   padding: 5px 0 7px 0;
   display: inline-block;
   vertical-align: top;
-  width: 145px;
+  width: 130px;
   text-align: center;
   margin-top: 40px;
   font-size: 16px;
+}
+
+.item-parameter li.second {
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .item-parameter li p {
