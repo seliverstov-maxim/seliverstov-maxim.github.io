@@ -25,12 +25,12 @@ hr { width: 200px; border-top: 2px solid #aaa; }
 }
 
 .header.section .callback {
-  font-size: 30px;
+  font-size: 2.1em;
 }
 
 .btn-callback {
   border-radius: 26px;
-  font-size: 16px;
+  font-size: 1.2em;
   line-height: 30px;
   padding: 4px 15px;
 }
@@ -45,13 +45,13 @@ hr { width: 200px; border-top: 2px solid #aaa; }
 }
 
 .wrap-offer h1 {
-  font-size: 70px;
+  font-size: 5em;
   font-weight: 300;
   line-height: 1.1;
 }
 
 .wrap-offer p {
-  font-size: 48px;
+  font-size: 3.4em;
   line-height: 1.1;
   margin-top: 40px;
   font-weight: 300;
@@ -78,7 +78,7 @@ hr { width: 200px; border-top: 2px solid #aaa; }
 }
 
 .item-parameter li p {
-  font-size: 22px;
+  font-size: 2.5em;
   line-height: 1.1;
   margin-top: 40px;
   font-weight: 300;
@@ -89,8 +89,9 @@ hr { width: 200px; border-top: 2px solid #aaa; }
   text-decoration: none;
   color: #fff;
   padding: 10px 40px;
-  font-size: 24px;
+  font-size: 1.8em;
   border-radius: 0;
+  white-space: normal;
 }
 
 
@@ -103,12 +104,12 @@ hr { width: 200px; border-top: 2px solid #aaa; }
 
 h2 {
   margin-top: 45px;
-  font-size: 48px;
+  font-size: 3.4em;
   font-weight: 300;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 3.5em;
   font-weight: 300;
 }
 
@@ -130,7 +131,7 @@ h3 {
 }
 
 .h-dscr {
-  font-size: 30px;
+  font-size: 0.6em;
   display: block;
 }
 
@@ -138,12 +139,13 @@ h3 {
   display: block;
   height: 44px;
   width: 450px;
+  max-width: 80%;
   margin: 10px auto;
   padding: 0 20px;
   border-radius: 22px;
   border: 1px solid #e8e8e8;
   box-shadow: inset 1px 1px 6px rgba(0, 0, 0, .06);
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .forms input {
@@ -154,7 +156,7 @@ h3 {
   width: 290px;
   height: 52px;
   border-radius: 26px;
-  font-size: 22px;
+  font-size: 1.5em;
   line-height: 40px;
   border: none;
   background: #f4646a;
@@ -180,7 +182,6 @@ h3 {
 .price-header {
   color: #fff;
   padding: 15px 15px;
-  font-size: 22px;
   font-weight: 300;
   text-align: center;
   border-radius: 7px 7px 0 0;
@@ -209,12 +210,12 @@ h3 {
   border-top: 1px solid #f4f3f3;
   position: relative;
   display: block;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 300;
 }
 
 .price.section ul li {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .price.section ul, li {
@@ -234,7 +235,7 @@ h3 {
 }
 
 .price.section .cost p {
-  font-size: 56px;
+  font-size: 4em;
   margin: 10px 0;
 }
 
@@ -243,7 +244,7 @@ h3 {
   height: 52px;
   border-radius: 26px;
   line-height: 40px;
-  font-size: 15px;
+  font-size: 1em;
   border: none;
   background: #f4646a;
   color: #fff;
@@ -292,18 +293,17 @@ h3 {
   height: 150px;
   background: #00ACE3;
   border-radius: 100px;
-  font-size: 24px;
   font-weight: 300;
 }
 
 .steps.section .icon {
-  font-size: 65px;
+  font-size: 4.6em;
   color: #FFFFFF;
   margin-top: 45px;
 }
 
 .steps.section .descr {
-  font-size: 24px;
+  font-size: 1.7em;
   font-weight: 300;
   display: block;
   width: 260px;
@@ -325,7 +325,7 @@ h3 {
 }
 
 .footer.section .callback-num a {
-  font-size: 40px;
+  font-size: 2.8em;
   color: #5B5B5B;
 }
 
@@ -350,7 +350,7 @@ h3 {
 
 .remodal-close:before {
   display: block;
-  font-size: 25px;
+  font-size: 1.8em;
   font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif !important;
   line-height: 25px;
   width: 25px;
@@ -364,7 +364,7 @@ h3 {
 }
 
 .remodal {
-  font-size: 16px;
+  font-size: 1.1em;
   position: relative;
   display: inline-block;
   width: 100%;
@@ -401,7 +401,7 @@ h3 {
 }
 
 .remodal h3 {
-  font-size: 40px;
+  font-size: 2.8em;
 }
 
 .remodal form {
