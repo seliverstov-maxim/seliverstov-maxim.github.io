@@ -5,8 +5,8 @@ $(document).ready(function() {
     paginationSpeed : 400,
     singleItem: true,
     navigationText: [
-      "<span class='glyphicon glyphicon-menu-left' aria-hidden='true'></span>",
-      "<span class='glyphicon glyphicon-menu-right' aria-hidden='true'></span>"
+      "<i class='fa fa-chevron-left' aria-hidden='true'></i>",
+      "<i class='fa fa-chevron-right' aria-hidden='true'></i>"
     ]
   });
 });
