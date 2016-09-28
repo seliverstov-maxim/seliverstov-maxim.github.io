@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <style>
+      html, body, .container, .gallery-dialog, .carousel-container, .slick-carousel {
+        height: 100%
+      }
+
       .gallery-dialog.dialog_message .carousel-container {
-        padding-right: 15px;
+        overflow: hidden;
       }
 
       .gallery-dialog.dialog_message .close_dialog_message {
@@ -29,12 +33,18 @@
       }
 
       .gallery-dialog .slick-carousel {
-        margin-top: 50px;
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
 
       .gallery-dialog .product_image {
         margin: 0 auto;
         max-width: 100%;
+      }
+
+      .slick-dots {
+        bottom: 0;
       }
 
       .slick-dots li button:before {
@@ -43,7 +53,7 @@
 
       .slick-carousel img {
         margin: 0 auto;
-        max-height: 80%;
+        max-height: 100%;
         max-width: 100%;
       }
     </style>
@@ -57,9 +67,9 @@
         </a>
         <div class="col-lg-12 carousel-container">
           <div class="slick-carousel slider">
-            <div><img src="http://www.studiokovka.ru/images/trueimg/originals/18/6BA4299DF114-18.jpg" /></div>
-            <div><img src="http://www.studiokovka.ru/images/trueimg/originals/18/3076EA72E505-18.jpg" /></div>
-            <div><img src="http://www.studiokovka.ru/images/trueimg/originals/18/30448DF13BAB-18.jpg" /></div>
+            <div class="img-container"><img src="http://www.studiokovka.ru/images/trueimg/originals/18/6BA4299DF114-18.jpg" /></div>
+            <div class="img-container"><img src="http://www.studiokovka.ru/images/trueimg/originals/18/3076EA72E505-18.jpg" /></div>
+            <div class="img-container"><img src="http://www.studiokovka.ru/images/trueimg/originals/18/30448DF13BAB-18.jpg" /></div>
           </div>
         </div>
       </div>
