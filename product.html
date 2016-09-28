@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <style>
+      .gallery-dialog.dialog_message .carousel-container {
+        padding-right: 15px;
+      }
+
+      .gallery-dialog.dialog_message .close_dialog_message {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px !important;
+        z-index: 5000;
+        position: absolute;
+        top: 17px;
+        right: 25px;
+        background: url("http://bookalook.ru/ofln/assets/close-049db0898b8e968547c4e813af7de473b15c2d6d32a32e55b876b6f5f7b7a0e1.png");
+        background-repeat: no-repeat
+      }
+
+      .gallery-dialog .slick-carousel {
+        margin-top: 50px;
+      }
+
+      .gallery-dialog .product_image {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      .slick-dots li button:before {
+        font-size: 16px;
+      }
+
+      .slick-carousel img {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row gallery-dialog dialog_message">
+        <a href="index.html">
+          <div class="close_dialog_message">
+          </div>
+        </a>
+        <div class="col-lg-12 carousel-container">
+          <div class="slick-carousel slider">
+            <div><img height="300px" src="http://www.studiokovka.ru/images/trueimg/originals/18/6BA4299DF114-18.jpg" /></div>
+            <div><img height="300px" src="http://www.studiokovka.ru/images/trueimg/originals/18/3076EA72E505-18.jpg" /></div>
+            <div><img height="300px" src="http://www.studiokovka.ru/images/trueimg/originals/18/6067A5C161B8-18.jpg" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-carousel').slick({
+          dots: true,
+          infinite: true,
+        });
+      });
+    </script>
+  </body>
+</html>
