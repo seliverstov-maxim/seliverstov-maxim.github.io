@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="https://pixijs.download/release/pixi.js"></script>
-    <link rel="icon" type="image/x-icon" href="./assets/ico/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico">
   </head>
   <body>
     .
@@ -183,7 +183,7 @@
     }
 
     const loadBackground = (w, h) => {
-      const sprite = PIXI.Sprite.from('./assets/bg.jpg');
+      const sprite = PIXI.Sprite.from('assets/bg.jpg');
       sprite.width = w;
       sprite.height = h;
       const container = new PIXI.Container();
@@ -192,8 +192,8 @@
     }
 
     PIXI.Assets.load([
-      './assets/minotaur.json',
-      './assets/bg.jpg'
+      'assets/minotaur.json',
+      'assets/bg.jpg'
     ]).then(() => {
       window.playerView = initPlayerView(100, 340);
       const container = new PIXI.Container();
