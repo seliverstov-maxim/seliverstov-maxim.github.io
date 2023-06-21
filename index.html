@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/ico/favicon.ico">
+  </head>
+  <body>
+  </body>
+  <script>
+    function pad(num, size) {
+      var s = "000000000" + num;
+      return s.substr(s.length-size);
+    }
+
+    function createTextures(framesCount, spriteName) {
+      const list = Array.from({length: framesCount}, (i, val) => `${spriteName}_${pad(val, 3)}.png`);
+      return list.map((e) => PIXI.Texture.from(e))
+    }
+
+    function createAnimatedStripe(framesCount, spriteName) {
+      let anim = new PIXI.AnimatedSprite(createTextures(framesCount, spriteName));
+      anim.animationSpeed = 0.5;
+      anim.anchor.set(0.5, 1);
+      anim.x = 0;
+      anim.y = 0;
+      anim.play();
+
+      return anim;
+    }
+
+    const app = new PIXI.Application({ background: '#1099bb', width: 640, height: 360 });
+    document.body.appendChild(app.view);
+
+
+    class PlayerView {
+      _state;
+      container;
+      needSwitchAnimation;
+      direction;
+      needRedraw;
+      scaleFactor = 0.15;
+      x = 0;
+      y = 0;
+
+      constructor() {
+        this.state = PlayerView.STATES.IDLE;
+        this.direction = PlayerView.DIRECTIONS.LEFT;
+      }
+
+      static get STATES() { return {IDLE: 'idle', WALK: 'walk'} }
+      static get DIRECTIONS() { return {RIGHT: 'right', LEFT: 'left'} }
+
+      get isWalk() { return this.state == PlayerView.STATES.WALK }
+      get isIdle() { return this.state == PlayerView.STATES.IDLE }
+      get state() { return this._state; }
+
+      set state(newState) {
+        const oldState = this._state;
+        this._state = newState;
+
+        if (oldState == newState) return;
+        if (!this.container) return;
+        this.needSwitchAnimation = true;
+      }
+
+      get isGoRight() { return this.direction == PlayerView.DIRECTIONS.RIGHT }
+      get idGoLeft() { return this.direction == PlayerView.DIRECTIONS.LEFT }
+
+      tick(delta = 0) {
+        if (!this.container) return;
+
+        if (this.direction == PlayerView.DIRECTIONS.RIGHT && this.isWalk) {
+          this.container.x += delta;
+          this.container.scale.x = this.scaleFactor;
+        }
+        if (this.direction == PlayerView.DIRECTIONS.LEFT && this.isWalk) {
+          this.container.x -= delta;
+          this.container.scale.x = -this.scaleFactor;
+        }
+
+        if (this.needSwitchAnimation) {
+          this.needSwitchAnimation = false;
+          this.applyAnimation();
+        }
+      }
+
+      applyAnimation() {
+        this.container.removeChildren();
+        if (this.isWalk) {
+          this.container.addChild(this.animations[PlayerView.STATES.WALK])
+        } else {
+          this.container.addChild(this.animations[PlayerView.STATES.IDLE])
+        }
+      }
+    }
+
+    class EventModel {
+      events = [];
+      EVENTS = [];
+      constructor(events) {
+        this.EVENTS = events;
+      }
+
+      get hasEvents() { return this.events.length > 0 }
+      get lastEvent() { return this.events.slice(-1) }
+      hasEvent(event) { return this.events.indexOf(event) != -1 }
+      hasNotEvent(event) { return !this.hasEvent(event) }
+      add(event) {
+        if (this.hasEvent(event)) return false;
+
+        this.events.push(event);
+        return true;
+      }
+      remove(event) {
+        if (this.hasNotEvent(event)) return false;
+
+        this.events = this.events.filter((e) => e != event);
+        return true;
+      }
+    }
+
+    const initPlayerView = (x = 100, y = 100) => {
+      let playerView = new PlayerView;
+
+      playerView.animations = {
+        idle: createAnimatedStripe(17, 'minotaur_idle'),
+        walk: createAnimatedStripe(23, 'minotaur_walking')
+      }
+
+      playerView.container = new PIXI.Container();
+      playerView.container.scale.x = 0.15;
+      playerView.container.scale.y = 0.15;
+      playerView.container.x = x;
+      playerView.container.y = y;
+      playerView.applyAnimation();
+
+      return playerView;
+    }
+
+    const subscribeEvents = (player) => {
+      window.eventModel = new EventModel({LEFT: PlayerView.DIRECTIONS.LEFT, RIGHT: PlayerView.DIRECTIONS.RIGHT});
+
+      document.addEventListener("keydown", (event) => {
+        const keyCode = event.keyCode;
+        if (event.isComposing || keyCode === 229) return;
+        if ([68, 65].indexOf(keyCode) == -1) return;
+
+        if (keyCode == 68 && player.isGoRight && player.isWalk) return;
+        if (keyCode == 65 && player.isGoLeft && player.isWalk) return;
+
+        if (keyCode == 68) {
+          eventModel.add(eventModel.EVENTS.RIGHT);
+        }
+
+        if (keyCode == 65) {
+          eventModel.add(eventModel.EVENTS.LEFT);
+        }
+
+        player.state = player.constructor.STATES.WALK;
+        player.direction = eventModel.lastEvent;
+      });
+
+      document.addEventListener("keyup", (event) => {
+        const keyCode = event.keyCode;
+        if (event.isComposing || keyCode === 229) return;
+
+        if (keyCode == 68) {
+         eventModel.remove(eventModel.EVENTS.RIGHT);
+        }
+
+        if (keyCode == 65) {
+          eventModel.remove(eventModel.EVENTS.LEFT);
+        }
+
+        if (eventModel.hasEvents) {
+          player.state = player.constructor.STATES.WALK;
+          player.direction = eventModel.lastEvent;
+        } else {
+          player.state = player.constructor.STATES.IDLE;
+        }
+      });
+    }
+
+    const loadBackground = (w, h) => {
+      const sprite = PIXI.Sprite.from('assets/bg.jpg');
+      sprite.width = w;
+      sprite.height = h;
+      const container = new PIXI.Container();
+      container.addChild(sprite);
+      return container;
+    }
+
+    PIXI.Assets.load([
+      'assets/minotaur.json',
+      'assets/bg.jpg'
+    ]).then(() => {
+      window.playerView = initPlayerView(100, 340);
+      const container = new PIXI.Container();
+      app.stage.addChild(loadBackground(app.screen.width, app.screen.height));
+      app.stage.addChild(playerView.container);
+
+      subscribeEvents(playerView);
+
+      app.ticker.add(delta => {
+        playerView.tick(delta);
+      });
+    });
+
+
+  </script>
+</html>
