@@ -4,28 +4,27 @@ class PlayerView {
   needSwitchAnimation;
   direction;
   needRedraw;
-  scaleFactor = 0.15;
+  scaleFactor = 1;
   x = 0;
   y = 0;
   minX = 0;
   maxX = 640
-  originSpriteSize = 900;
-  characterWidth = 135;
-  characterCollisionShift = this.characterWidth / 4 - 10;
 
-  constructor(x, y, minX, maxX) {
+  constructor(x, y, minX, maxX, animations) {
     this.state = PlayerView.STATES.IDLE;
     this.direction = PlayerView.DIRECTIONS.LEFT;
     this.x = x;
     this.y = y;
     this.minX = minX;
     this.maxX = maxX;
+    this.animations = animations;
 
     this.container = new PIXI.Container();
-    this.container.scale.x = this.characterWidth / this.originSpriteSize;
-    this.container.scale.y = this.characterWidth / this.originSpriteSize;
     this.container.x = x;
     this.container.y = y;
+    this.applyAnimation();
+    this.characterWidth = this.container.children[0].texture.orig.width;
+    this.characterCollisionShift = this.characterWidth / 4 - 10;
   }
 
   static get STATES() { return {IDLE: 'idle', WALK: 'walk'} }

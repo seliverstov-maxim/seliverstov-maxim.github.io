@@ -5,7 +5,7 @@ function createTextures(framesCount, spriteName) {
 
 function createAnimatedStripe(framesCount, spriteName) {
   let anim = new PIXI.AnimatedSprite(createTextures(framesCount, spriteName));
-  anim.animationSpeed = 0.5;
+  anim.animationSpeed = 0.4;
   anim.anchor.set(0.5, 1);
   anim.x = 0;
   anim.y = 0;
