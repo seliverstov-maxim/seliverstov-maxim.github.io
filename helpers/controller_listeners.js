@@ -1,8 +1,20 @@
 const subscribeConrollerEvents = (controller, eventModel) => {
    let controllerPressed = false;
 
-   const onPointerDown = () => {
+   const handle = (x, y) => {
+      if(!controllerPressed) return;
+      if(x - 60 > 0) {
+         eventModel.remove(eventModel.EVENTS.LEFT);
+         eventModel.add(eventModel.EVENTS.RIGHT);
+      } else {
+         eventModel.remove(eventModel.EVENTS.RIGHT);
+         eventModel.add(eventModel.EVENTS.LEFT);
+      }
+   };
+
+   const onPointerDown = (e) => {
       controllerPressed = true;
+      handle(e.client.x, e.client.y);
    };
 
    const onPointerUp = () => {
@@ -11,14 +23,7 @@ const subscribeConrollerEvents = (controller, eventModel) => {
    };
 
    const onPointerMove = (e) => {
-      if(!controllerPressed) return;
-      if(e.client.x - 60 > 0) {
-         eventModel.remove(eventModel.EVENTS.LEFT);
-         eventModel.add(eventModel.EVENTS.RIGHT);
-      } else {
-         eventModel.remove(eventModel.EVENTS.RIGHT);
-         eventModel.add(eventModel.EVENTS.LEFT);
-      }
+      handle(e.client.x, e.client.y);
    };
 
    controller.eventMode = 'dynamic';

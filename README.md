@@ -1,3 +1,3 @@
 # INFO
 ## Launch
-visit: http://seliverstov-maxim.github.io/
+visit: https://seliverstov-maxim.github.io/
