@@ -41,7 +41,7 @@ const chevronePath = (x, y, w, h, border = 1, direction = 'left') => {
   }
 }
 const drawController = (stage, x, y) => {
-  const radius = 50;
+  const radius = 75;
   window.graphics = new PIXI.Graphics();
   graphics.x = x;
   graphics.y = y;
@@ -50,14 +50,14 @@ const drawController = (stage, x, y) => {
   let color = 0x00DEFF;
   graphics.lineStyle(0);
   graphics.beginFill(color, 1);
-  graphics.drawCircle(0, 0, 50);
+  graphics.drawCircle(0, 0, radius);
   graphics.endFill();
 
   color = 0x6FEDFF;
   graphics.lineStyle(1, color, 1);
   graphics.beginFill(color, 1);
-  graphics.drawPolygon(chevronePath(-30, 0, 10, 30, 4, 'left'));
-  graphics.drawPolygon(chevronePath(30, 0, 10, 30, 4, 'right'));
+  graphics.drawPolygon(chevronePath(20 - radius, 0, radius / 5, radius / 2, 4, 'left'));
+  graphics.drawPolygon(chevronePath(radius - 20, 0, radius / 5, radius / 2, 4, 'right'));
   graphics.endFill();
 
   graphics.filters = [new PIXI.filters.AlphaFilter(0.3)];

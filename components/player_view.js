@@ -10,13 +10,13 @@ class PlayerView {
   minX = 0;
   maxX = 640
 
-  constructor(x, y, minX, maxX, animations) {
+  constructor(x, y, screenWidth, animations) {
     this.state = PlayerView.STATES.IDLE;
     this.direction = PlayerView.DIRECTIONS.LEFT;
     this.x = x;
     this.y = y;
-    this.minX = minX;
-    this.maxX = maxX;
+    this.minX = 0;
+    this.maxX = screenWidth;
     this.animations = animations;
 
     this.container = new PIXI.Container();

@@ -18,18 +18,7 @@
     <p><b>Navigation </b>Move right: press d; Move left: press a</p>
   </body>
   <script>
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (!isMobile) {
-      widthRatio = 0.95;
-      heightRatio = 0.65;
-      var deg = 0;
-      document.body.style.webkitTransform = 'rotate('+deg+'deg)';
-      document.body.style.mozTransform    = 'rotate('+deg+'deg)';
-      document.body.style.msTransform     = 'rotate('+deg+'deg)';
-      document.body.style.oTransform      = 'rotate('+deg+'deg)';
-      document.body.style.transform       = 'rotate('+deg+'deg)';
-    }
-    const app = new PIXI.Application({ background: '#1099bb', width: 640, height: 360 });
+    const app = new PIXI.Application({ background: '#1099bb', width: 900, height: 360 });
     document.body.appendChild(app.view);
 
     const loadBackground = (w, h) => {
@@ -45,13 +34,13 @@
       'assets/minotaur.json',
       'assets/bg.jpg'
     ]).then(() => {
-      window.player = initPlayerView(app.screen.width / 2, 340, 0, app.screen.width);
+      window.player = initPlayerView(app.screen.width / 2, 340, app.screen.width);
       app.stage.addChild(loadBackground(app.screen.width, app.screen.height));
       app.stage.addChild(player.container);
 
       window.eventModel = new EventModel({LEFT: PlayerView.DIRECTIONS.LEFT, RIGHT: PlayerView.DIRECTIONS.RIGHT});
 
-      const controller = drawController(app.stage, 60, app.screen.height - 60);
+      const controller = drawController(app.stage, 90, app.screen.height - 90);
       subscribeConrollerEvents(controller, eventModel);
       subscribeKeyboardEvents(eventModel);
       eventModel.subscribe('any', (e, m) => {
