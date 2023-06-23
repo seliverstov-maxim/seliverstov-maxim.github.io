@@ -5,7 +5,7 @@ for textures: https://www.codeandweb.com/tp-online
 
 ## TODO:
 
-Update controller
+Update controller - done
 Make larger map
 Make jumps
 Make attack
