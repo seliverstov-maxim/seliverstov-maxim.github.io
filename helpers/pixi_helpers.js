@@ -14,53 +14,66 @@ function createAnimatedStripe(framesCount, spriteName) {
   return anim;
 }
 
-const chevronePath = (x, y, w, h, border = 1, direction = 'left') => {
-  border = Math.ceil(border / 2);
-  if (direction == 'left') {
-    return [
-      x + w / 2, y - h / 2,
-      x - w / 2, y,
-      x + w / 2, y + h/ 2,
+const renderCircle = (x, y, r, color) => {
+  const g = new PIXI.Graphics();
+  g.x = x;
+  g.y = y;
+  g.width = r;
+  g.height = r;;
 
-      x + w / 2 + border, y + h/ 2 - border,
-      x - w / 2 + border, y,
-      x + w / 2 + border, y - h / 2 + border
-    ]
-  }
+  g.lineStyle(0);
+  g.beginFill(color, 1);
+  g.drawCircle(0, 0, r);
+  g.endFill();
 
-  if (direction == 'right') {
-    return [
-      x - w / 2, y - h / 2,
-      x + w / 2, y,
-      x - w / 2, y + h/ 2,
-
-      x - w / 2 - border, y + h/ 2 - border,
-      x + w / 2 - border, y,
-      x - w / 2 - border, y - h / 2 + border
-    ]
-  }
+  return g;
 }
+
+const setStickCoords = (stick, x, y) => {
+  stick.x = x - stick.width / 2;
+  stick.y = y - stick.height / 2;
+}
+
 const drawController = (stage, x, y) => {
   const radius = 75;
-  window.graphics = new PIXI.Graphics();
-  graphics.x = x;
-  graphics.y = y;
-  graphics.width = radius * 2;
-  graphics.height = radius * 2;
-  let color = 0x00DEFF;
-  graphics.lineStyle(0);
-  graphics.beginFill(color, 1);
-  graphics.drawCircle(0, 0, radius);
-  graphics.endFill();
+  let color;
 
-  color = 0x6FEDFF;
-  graphics.lineStyle(1, color, 1);
-  graphics.beginFill(color, 1);
-  graphics.drawPolygon(chevronePath(20 - radius, 0, radius / 5, radius / 2, 4, 'left'));
-  graphics.drawPolygon(chevronePath(radius - 20, 0, radius / 5, radius / 2, 4, 'right'));
-  graphics.endFill();
+  const controller = new PIXI.Container();
+  controller.x = x - radius;
+  controller.y = y - radius;
+  controller.width = radius * 2;
+  controller.height = radius * 2;
+  controller.addChild(renderCircle(radius, radius, radius, 0x00DEFF));
 
-  graphics.filters = [new PIXI.filters.AlphaFilter(0.3)];
-  stage.addChild(graphics);
-  return graphics;
+  controller.filters = [new PIXI.filters.AlphaFilter(0.3)];
+  controller.updateStickPosition = (x, y) => {
+    const stick = controller.children[1];
+    const stickRadius = diagonalLength(stick.width);
+    const controllerRadius = controller._width / 2;
+    function angle(cx, cy, ex, ey) {
+      var dy = ey - cy;
+      var dx = ex - cx;
+      var theta = Math.atan2(dy, dx); // range (-PI, PI]
+      return theta;
+    }
+
+    const radian = angle(0, 0, x, y);
+    let radius = diagonalLength(x, y);
+    if (radius > controllerRadius - stickRadius / 2) radius = controllerRadius - stickRadius / 2;
+
+    setStickCoords(stick, controller.width / 2 + Math.cos(radian) * radius, controller.height / 2 + Math.sin(radian) * radius);
+    return true;
+  }
+
+  const stick = new PIXI.Container();
+  stickRadius = radius / 4;
+  stick.addChild(renderCircle(stickRadius, stickRadius, stickRadius, 0xB894FF));
+  stick.width = stickRadius * 2;
+  stick.height = stickRadius * 2;
+  setStickCoords(stick, controller.width / 2, controller.height / 2);
+
+  controller.addChild(stick);
+
+  stage.addChild(controller);
+  return controller;
 }

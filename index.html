@@ -15,10 +15,11 @@
     <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico">
   </head>
   <body>
-    <p><b>Navigation </b>Move right: press d; Move left: press a</p>
+    <p><b>Keyboard navigation </b>Move right: press d; Move left: press a. <b>Mobile navigation</b>: use controller on left bottom screen</p>
   </body>
   <script>
     const app = new PIXI.Application({ background: '#1099bb', width: 900, height: 360 });
+    app.stage.eventMode = 'dynamic';
     document.body.appendChild(app.view);
 
     const loadBackground = (w, h) => {
@@ -40,7 +41,7 @@
 
       window.eventModel = new EventModel({LEFT: PlayerView.DIRECTIONS.LEFT, RIGHT: PlayerView.DIRECTIONS.RIGHT});
 
-      const controller = drawController(app.stage, 90, app.screen.height - 90);
+      window.controller = drawController(app.stage, 90, app.screen.height - 90);
       subscribeConrollerEvents(controller, eventModel);
       subscribeKeyboardEvents(eventModel);
       eventModel.subscribe('any', (e, m) => {
