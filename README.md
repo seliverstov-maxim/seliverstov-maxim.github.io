@@ -11,3 +11,7 @@ Make jumps
 Make attack
 Make an enemies
 Make multiplayer
+
+## RelizeNotes
+
+- 23.07.2023 Update mobile controll
